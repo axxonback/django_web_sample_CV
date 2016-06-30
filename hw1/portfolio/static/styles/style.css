@@ -58,6 +58,14 @@ header h1 {
   text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 
+.jumbotron .contacts {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
 .jumbotron h2 {
   font-size: 60px;
   font-weight: 700;
