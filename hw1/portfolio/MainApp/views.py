@@ -13,4 +13,9 @@ def eduw(request):
 	return render(request, 'eduw.html')
 
 def contacts(request):
-	return render(request, 'contacts.html')
+	contactss = ["Electra Tower, Tel-Aviv, Israel", "julia.sayapina@icloud.com", "julia.sayapina"]
+	return render(request, 'contacts.html', {"contacts": contactss})
+
+def test(request):
+	test1 = [1, 2, 3, 4]
+	return render(request, 'test.html', {'testing': test1})

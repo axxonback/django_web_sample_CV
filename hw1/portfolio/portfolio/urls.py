@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^port/', port),
     url(r'^eduw/', eduw),
     url(r'^contacts/', contacts),
+    url(r'^test/', test),
     
 ]

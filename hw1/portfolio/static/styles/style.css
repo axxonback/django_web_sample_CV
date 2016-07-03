@@ -48,19 +48,13 @@ header h1 {
   padding: 5px 15px;
 }
 
+
+
 .jumbotron {
   display: flex;
   align-items: center;
   background-image: url('../img/map.jpg');
   background-position: center;
-  color: #ffffff;
-  height: 500px;
-  text-shadow: 0.25px 0.25px 0.25px #000000;
-}
-
-.jumbotron .contacts {
-  display: flex;
-  align-items: center;
   color: #ffffff;
   height: 500px;
   text-shadow: 0.25px 0.25px 0.25px #000000;
@@ -73,6 +67,18 @@ header h1 {
   color: #fff;
 }
 
+.contacts {
+  display: flex;
+  align-items: center;
+  background-image: none;
+  background-color: #ffffff;
+  height: 500px;
+  /*text-shadow: 0.25px 0.25px 0.25px #000000;*/
+  color: #000;
+  text-align: left;
+}
+
+
 .jumbotron h3 {
   margin: 0 0 20px;
   color: #fff;
@@ -81,6 +87,26 @@ header h1 {
 section .row img {
   margin: 0 0 30px;
   width: 10%;
+}
+
+.contacts .col-md-4 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contacts img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.contacts .col-md-12 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contacts .col-md-12 {
+  justify-content: flex-start;
 }
 
 .col-sm-6 {
