@@ -1,116 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>NFCeramics</title>
-  <meta charset="utf-8" />
-  <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- {% extends 'base.html' %} -->
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-		<link href="../static/styles/main.css" rel="stylesheet">
-
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-  
-  <link rel="shortcut icon" href="http://cliparts.co/cliparts/zTX/oro/zTXoropTB.png" type="image/png">
-</head>
-
-<body>
-	<header class = "container">
-		<div class="row">
-			<div class="menu">
-	          <img src="https://cdn.css-tricks.com/wp-content/uploads/2012/10/threelines.png" width="60px">
-	          <ul class="dropdown-menu">
-	            <li><a href="#">Shop</a></li>
-	            <li><a href="#">Workshops</a></li>
-	            <li><a href="#">Payment&amp;DeliveryPolicy</a></li>
-	            <li><a href="#">Special Orders</a></li>
-	            <li><a href="#">About me</a></li>
-	            <li><a href="#">Contacts</a></li>
-	          </ul>
-	        </div>
-			<h1 class="col-sm-8">NFCeramics</h1>
-			<nav class="col-sm-4">
-				<p>Cart</p>
-				<div class="login">
-	              <p>Login</p>
-	              <div class="dropdown-menu">
-	                <h3>Log in</h3>
-	                <form role="form">
-	                  <div class="form-group">
-	                    <input type="email" class="form-control" id="email" placeholder="Email">
-	                  </div>
-	                  <div class="form-group">
-	                    <input type="password" class="form-control" id="password" placeholder="Password">
-	                  </div>
-	                  <button type="submit" class="btn">Log in</button>
-	                  <button type="button" class="btn signup">Sign Up</button>
-	                </form>
-	              </div>
-	            </div>
-			</nav>
-		</div>
-	</header>
-	<section class="jumbotron">
-		<div class="container">
-			<div class="row text-center">
-				<h2>Handmade Ceramics</h2>
-				<h3>Tableware and jewelry</h3>
-				<a class="btn btn-primary" href="#">Shop</a>
-			</div>
-		</div>
-	</section>
-	<section class="container">
-		<div class="row">
-			<div class="col-sm-6">
-				<p>Tableware</p>
-				<img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xlt1/t31.0-8/11063777_954784747896443_180086259055660708_o.jpg">
-			</div>
-			<div class="col-sm-6">
-				<p>Jewelry</p>
-				<img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/t31.0-8/11133978_865245640183688_1695145246003787667_o.jpg">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6">
-				<p>Interior</p>
-				<img src="https://scontent.xx.fbcdn.net/hphotos-xtp1/t31.0-8/12138421_953301274711457_6782473970554001484_o.jpg">
-			</div>
-			<div class="col-sm-6">
-				<p>Gifts</p>
-				<img src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-xtf1/t31.0-8/12697050_1020911204617130_8314232336519854097_o.jpg">
-			</div>
-		</div>
-		<div class="row text-center">
-      		<a class="btn btn-secondary" href="#">View Complete Catalogue</a>
-    	</div>
-	</section>
+{% block title %}
+		<title>Experience</title>
+	{% endblock %}
 	
-	<footer class="container">
-	    <div class="row">
-	      <p class="col-sm-4">&copy; 2016 NFCeramics Moscow</p>
-	      <ul class="col-sm-8">
-	        <li class="col-sm-1">
-	          <a href="#"><img src="http://icons.iconarchive.com/icons/icons8/ios7/256/Logos-Facebook-icon.png"></a>
-	        </li>
-	        <li class="col-sm-1">
-	          <a href="#"><img src="http://icons.iconarchive.com/icons/icons8/ios7/256/Logos-Instagram-icon.png"></a>
-	        </li>
-	        <li class="col-sm-1">
-	          <a href="#"><img src="http://icons.iconarchive.com/icons/icons8/ios7/256/Logos-Vkontakte-icon.png"></a>
-	        </li>
-	        <li class="col-sm-1">
-	          <a href="#"><img src="http://icons.iconarchive.com/icons/icons8/ios7/256/Logos-Twitter-icon.png"></a>
-	        </li>
-	      </ul>
-	    </div>
-  	</footer>
-  	<script src="https://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
-    <script src='script.js'></script>
-</body>
-</html>
+	{% block css %}
+		<link href="../static/styles/style.css" rel="stylesheet">
+	{% endblock %}
+
+	{% block caption %}
+		<h1 class="col-sm-8">Education&amp;Experience</h1>
+	{% endblock %}
+
+	{% block content %}
+		<!-- <section class="jumbotron contacts"> -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4">1
+					</div>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-2">2
+							</div>
+							<div class="col-md-10">10
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">3
+					</div>
+				</div>
+			</div>
+		<!-- </section> -->
+	{% endblock %}
