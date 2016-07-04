@@ -25,13 +25,40 @@
 				<hr>
 				{% for e in exp %}
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-4 exp">
 						<h3>{{e.org | linebreaks}}</h3>
 						<p>{{e.period | linebreaks}}</p>
 						</div>
 						<div class="col-md-8">
 						<h3>{{e.position | linebreaks}}</h3>
 						<p>{{e.duties | linebreaks}}</p>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="media">
+								<div class="media-left media-middle">
+								<a href="#">
+								  <img class="media-object ref" src="/static/img/pin.png" alt="map">
+								</a>
+								</div>
+								<div class="media-body reftext">
+								{{e.location}}
+								</div>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="media">
+								<div class="media-left media-middle">
+								<a href="#">
+								  <img class="media-object ref" src="/static/img/link.png" alt="map">
+								</a>
+								</div>
+								<div class="media-body reftext">
+								<a href="{{e.site}}">{{e.site}}</a>
+								</div>
+								</div>
+								
+							</div>
 						</div>
 					</div>
 				{% endfor %}

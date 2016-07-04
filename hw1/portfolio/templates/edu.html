@@ -33,13 +33,33 @@
 						<h3>{{e.degree | linebreaks}}</h3>
 						<p>{{e.desc | linebreaks}}</p>
 						</div>
+
 						<div class="row">
-							<div class="col-md-4">
-								{{e.location | linebreaks}}
-						
+							<div class="col-md-3">
+								<div class="media">
+								<div class="media-left media-middle">
+								<a href="#">
+								  <img class="media-object ref" src="/static/img/pin.png" alt="map">
+								</a>
+								</div>
+								<div class="media-body reftext">
+								{{e.location}}
+								</div>
+								</div>
 							</div>
-							<div class="col-md-8">
-								<a href="{{e.site}}">School#1900</a>
+
+							<div class="col-md-4">
+								<div class="media">
+								<div class="media-left media-middle">
+								<a href="#">
+								  <img class="media-object ref" src="/static/img/link.png" alt="map">
+								</a>
+								</div>
+								<div class="media-body reftext">
+								<a href="{{e.site}}">{{e.site}}</a>
+								</div>
+								</div>
+								
 							</div>
 						</div>
 					</div>
