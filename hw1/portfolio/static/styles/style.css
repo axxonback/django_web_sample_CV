@@ -38,9 +38,6 @@ header h1 {
   font-family: Helvetica, Arial, sans-serif; 
 }
 
-.menu .dropdown-menu ul li .disabled {
-  color: #;
-}
 
 .menu .dropdown-menu li a {
   color: black;
@@ -67,17 +64,20 @@ header h1 {
   color: #fff;
 }
 
-.contacts {
+.fourzerofour {
+  font-size: 700px;
+  color: #fff;
+}
+
+.contacto {
   display: flex;
   align-items: center;
   background-image: none;
   background-color: #ffffff;
   height: 500px;
-  /*text-shadow: 0.25px 0.25px 0.25px #000000;*/
   color: #000;
   text-align: left;
 }
-
 
 .jumbotron h3 {
   margin: 0 0 20px;
@@ -89,24 +89,15 @@ section .row img {
   width: 10%;
 }
 
-.contacts .col-md-4 {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.contacts img {
+.contact {
   width: 32px;
   height: 32px;
   vertical-align: middle;
 }
 
-.contacts .col-md-12 {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.contacts .col-md-12 {
-  justify-content: flex-start;
+.contacttext {
+  vertical-align: middle;
+  font-size: 16px;
 }
 
 .col-sm-6 {

@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+		<title>Experience</title>
+	{% endblock %}
+	
+	{% block css %}
+		<link href="../static/styles/style.css" rel="stylesheet">
+	{% endblock %}
+
+	{% block caption %}
+		<h1 class="col-sm-8">Experience</h1>
+	{% endblock %}
+
+	{% block menu2 %}disabled{% endblock %}
+
+
+
+	{% block content %}
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-8">
+				<hr>
+				{% for e in exp %}
+					<div class="row">
+						<div class="col-md-4">
+						<h3>{{e.org | linebreaks}}</h3>
+						<p>{{e.period | linebreaks}}</p>
+						</div>
+						<div class="col-md-8">
+						<h3>{{e.position | linebreaks}}</h3>
+						<p>{{e.duties | linebreaks}}</p>
+						</div>
+					</div>
+				{% endfor %}
+				<hr>
+				</div>
+				<div class="col-md-2">
+				</div>
+			</div>
+		</div>
+
+	{% endblock %}
+
+	<!-- 
+		{% for e in exp %}
+			{{e.org | linebreaks}}
+			{{e.position | linebreaks}}
+			{{e.site | linebreaks}}
+			{{e.country | linebreaks}}
+		{% endfor %}
+	 -->

@@ -12,11 +12,51 @@
 		<h1 class="col-sm-8">Contacts</h1>
 	{% endblock %}
 
+	{% block menu3 %}disabled{% endblock %}
+
 	{% block content %}
 		
-						
-		{% for contact in contacts %}
-			{{contact | linebreaks}}
-		{% endfor %}
+		<div class="container-fluid contacto">
+			<div class="row">
+				<div class="col-md-4">
+				</div>
+				<div class="col-md-4">
+				<hr>
+					<div class="media">
+						<div class="media-left media-middle">
+						<a href="#">
+						  <img class="media-object contact" src="/static/img/email.png" alt="email">
+						</a>
+						</div>
+						<div class="media-body contacttext">
+						julia.sayapina@icloud.com
+						</div>
+						</div>
+					<div class="media">
+						<div class="media-left media-middle">
+						<a href="#">
+						  <img class="media-object contact" src="/static/img/pin.png" alt="map">
+						</a>
+						</div>
+						<div class="media-body contacttext">
+						ElectraTower, Tel-Aviv, Israel
+						</div>
+						</div>
+					<div class="media">
+						<div class="media-left media-middle">
+						<a href="#">
+						  <img class="media-object contact" src="http://icons.iconarchive.com/icons/icons8/ios7/256/Logos-Skype-Copyrighted-icon.png" alt="map">
+						</a>
+						</div>
+						<div class="media-body contacttext">
+						julia.sayapina
+						</div>
+						</div>
+				<hr>
+				</div>
+				<div class="col-md-4">
+				</div>
+			</div>
+		</div>
 
 	{% endblock %}

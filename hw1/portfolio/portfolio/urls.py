@@ -21,8 +21,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home),
     url(r'^port/', port),
-    url(r'^eduw/', eduw),
+    url(r'^edu/', edu),
+    url(r'^exp/', exp),
     url(r'^contacts/', contacts),
     url(r'^test/', test),
-    
+    # url(r'^.*$', not_found),
 ]
