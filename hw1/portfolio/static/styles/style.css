@@ -77,6 +77,7 @@ header h1 {
   height: 500px;
   color: #000;
   text-align: left;
+  margin-bottom: 30px; 
 }
 
 .jumbotron h3 {
@@ -141,6 +142,32 @@ section .row img {
   opacity: 1;
   color: #fff;
 }
+
+
+.maps:hover {
+  cursor: pointer;
+}
+
+.map .dropdown-menu{
+  position: absolute;
+  top: 15px;
+  right: auto;
+  left: auto;
+  border-radius: 0;
+  padding: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+.pdf {
+  align-items: center;
+}
+
+.pdf img {
+  width: 32px;
+  height: 32px;
+}
+
 
 footer {
   font-size: 12px;

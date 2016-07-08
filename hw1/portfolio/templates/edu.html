@@ -26,7 +26,7 @@
 				{% for e in edu %}
 					<div class="row">
 						<div class="col-md-4">
-						<h3>{{e.org | linebreaks}}</h3>
+						<h3>{{e.org.stp_name | linebreaks}}</h3>
 						<p>{{e.period | linebreaks}}</p>
 						</div>
 						<div class="col-md-8">
@@ -38,12 +38,16 @@
 							<div class="col-md-3">
 								<div class="media">
 								<div class="media-left media-middle">
-								<a href="#">
-								  <img class="media-object ref" src="/static/img/pin.png" alt="map">
-								</a>
+								<!-- <a href="{{e.org.stp_location}}" target="blank"> -->
+								<div class="map">
+									<img class="media-object ref maps {{e.classname}}" src="/static/img/pin.png" alt="map">
+									<iframe class="dropdown-menu {{e.classname}}" src="{{e.org.stp_location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+
+
 								</div>
 								<div class="media-body reftext">
-								{{e.location}}
+								Moscow, Russia
 								</div>
 								</div>
 							</div>
@@ -51,12 +55,12 @@
 							<div class="col-md-4">
 								<div class="media">
 								<div class="media-left media-middle">
-								<a href="#">
+								<a href="{{e.org.stp_site}}" target="blank">
 								  <img class="media-object ref" src="/static/img/link.png" alt="map">
 								</a>
 								</div>
 								<div class="media-body reftext">
-								<a href="{{e.site}}">{{e.site}}</a>
+								<a href="{{e.org.stp_site}}">{{e.org.stp_site}}</a>
 								</div>
 								</div>
 								
@@ -72,12 +76,3 @@
 		</div>
 
 	{% endblock %}
-
-	<!-- 
-		{% for e in exp %}
-			{{e.org | linebreaks}}
-			{{e.position | linebreaks}}
-			{{e.site | linebreaks}}
-			{{e.country | linebreaks}}
-		{% endfor %}
-	 -->
