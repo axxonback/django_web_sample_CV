@@ -18,7 +18,7 @@ function latest_first(slice) {
 		//function running if success
 		success: function(response) {
 			//show responded html
-			console.log('success');
+			/*console.log('success');*/
 			$('#latest_first').html(response.html);
 		},
 		error: function (xhr, status, error) {

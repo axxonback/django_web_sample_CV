@@ -44,9 +44,7 @@ def latest_first(request):
 			exp = exp[: int(slice)]
 		# print(len(jobs))
 		html = loader.render_to_string('inc_jobs.html', {'exp': exp})
-		print(html)
 		data = {'html': html}
-		print((data))
 		return JsonResponse(data)
 
 	raise Http404
