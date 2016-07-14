@@ -15,47 +15,29 @@
 	{% block menu1 %}disabled{% endblock %}
 
 	{% block content %}
-<div class="container-fluid contacto">
-	<div id="main">
-		<div class="inner">
-			<section class="tiles">
-				<article class="style1">
-					<span class="image">
-						<img src="/static/img/seleq1.png" alt="slq" />
-					</span>
-					<a href="#">
-						<h2>Seleq</h2>
-						<div class="content">
-							<p>WIX experiment for the Charity organisation סל''ק in Israel</p>
-						</div>
-					</a>
-				</article>
-				<article class="style2">
-					<span class="image">
-						<img src="/static/img/ph1.png" alt="html/css" />
-					</span>
-					<a href="#">
-						<h2>Pure HTML/CSS</h2>
-						<div class="content">
-							<p>A project made within an HTML+CSS course</p>
-						</div>
-					</a>
-				</article>
-				<article class="style4">
-					<span class="image">
-						<img src="/static/img/nfceramics1.png" alt="NFCeramics" />
-					</span>
-					<a href="#">
-						<h2>NFCeramics</h2>
-						<div class="content">
-							<p>A Landing page created for &copy;NFCeramics</p>
-						</div>
-					</a>
-				</article>
-			</section>
+		<div class="container-fluid contacto">
+			<div id="main">
+				<div class="inner">
+					<section class="tiles">
+					
+					{% for p in prs %}
+						<article class="{{p.style}}">
+							<span class="image">
+								<img src="{{p.img}}" alt="{{p.name}}" />
+							</span>
+							<a href="{{p.site}}">
+								<h2>{{p.name}}</h2>
+								<div class="content">
+									<p>{{p.desc}}</p>
+								</div>
+							</a>
+						</article>
+					{% endfor %}
+
+					</section>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
 
 	{% endblock %}
 

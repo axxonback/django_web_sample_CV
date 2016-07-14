@@ -33,6 +33,7 @@ class Projects(models.Model):
 	date = models.DateField(verbose_name = 'Production date')
 	site = models.URLField(verbose_name = 'Project link')
 	desc = models.TextField(verbose_name = 'Description')
-	img = models.ImageField(verbose_name = 'Image', , null=True, blank=True)
+	img = models.URLField(verbose_name = 'Image', null=True, blank=True)
+	style = models.CharField(verbose_name = 'CSS Style #', blank = True, max_length = 10)
 		
 

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import Http404
 from .models import Experience
 from .models import Education
+from .models import Projects
 
 
 # Create your views here.
