@@ -28,7 +28,7 @@ def exp(request):
 
 def contacts(request):
 	menu = 'disabled'
-	contactss = ["Electra Tower, Tel-Aviv, Israel", "julia.sayapina@icloud.com", "julia.sayapina"]
+	contactss = ["Be'er-Sheva, Israel", "julia.sayapina@icloud.com", "julia.sayapina"]
 	return render(request, 'contacts.html', {"contacts": contactss, "menu3": menu})
 
 def test(request):
