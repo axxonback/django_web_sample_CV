@@ -3,10 +3,6 @@
 	{% block title %}
 		<title>Portfolio</title>
 	{% endblock %}
-	
-	{% block css %}
-		<link href="/static/styles/style.css" rel="stylesheet">
-	{% endblock %}
 
 	{% block caption %}
 		<h1 class="col-sm-8">Projects</h1>
@@ -25,8 +21,8 @@
 							<span class="image">
 								<img src="{{p.img}}" alt="{{p.name}}" />
 							</span>
-							<a href="{{p.site}}">
-								<h2>{{p.name}}</h2>
+							<a href="{{p.site}}" target="blank">
+								<h2 class="port">{{p.name}}</h2>
 								<div class="content">
 									<p>{{p.desc}}</p>
 								</div>

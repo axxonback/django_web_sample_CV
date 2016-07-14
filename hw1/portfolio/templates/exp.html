@@ -3,10 +3,6 @@
 {% block title %}
 		<title>Experience</title>
 	{% endblock %}
-	
-	{% block css %}
-		<link href="../static/styles/style.css" rel="stylesheet">
-	{% endblock %}
 
 	{% block caption %}
 		<h1 class="col-sm-8">Experience</h1>
@@ -21,9 +17,17 @@
 			<div class="row">
 				<div class="col-md-2">
 				</div>
-				<div class="col-md-8">
+				<div class="col-md-8 ">
 				<hr>
-				{% for e in exp %}
+				<span>
+					{% csrf_token %}
+					<input type="checkbox" name="latest_first" value="sort" onclick="on_check(this)" /> Latest 3 first
+				</span>
+				<div id="latest_first">
+				{% block jobs %}
+					{% include 'inc_jobs.html' %}
+				{% endblock %}
+				<!-- {% for e in exp %}
 					<div class="row">
 						<div class="col-md-4">
 						<h3>{{e.org.employer_name | linebreaks}}</h3>
@@ -68,8 +72,8 @@
 						</div>
 					</div>
 
-				{% endfor %}
-				
+				{% endfor %} -->
+				</div>
 				<hr>
 				</div>
 				
@@ -78,5 +82,7 @@
 				</div>
 			</div>
 		</div>
-
+	{% block js %} 
+		<script type="text/javascript" src = "/static/js/script-exp.js"></script>
+	{% endblock %}
 	{% endblock %}
