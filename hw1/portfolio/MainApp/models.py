@@ -27,6 +27,7 @@ class Education(models.Model):
 	degree = models.CharField(verbose_name = "Degree", max_length = 30)
 	desc = models.TextField(verbose_name = "Duties", blank = True)
 	classname = models.CharField(verbose_name = 'Class name', blank=True, max_length = 100)
+	start_date = models.DateField(verbose_name = 'Date of start', blank = True)
 
 class Projects(models.Model):
 	name = models.CharField(verbose_name = 'Project name', max_length = 50)

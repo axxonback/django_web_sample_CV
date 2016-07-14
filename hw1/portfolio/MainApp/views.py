@@ -18,7 +18,7 @@ def port(request):
 
 def edu(request):
 	menu = 'disabled'
-	edus = Education.objects.all()
+	edus = Education.objects.all().order_by('-start_date')
 	return render(request, 'edu.html', {"edu": edus, "menu1": menu})
 
 def exp(request):
