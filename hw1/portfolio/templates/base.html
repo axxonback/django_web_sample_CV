@@ -5,6 +5,7 @@
 		<!-- <title>Sayapina</title> -->
 	{% endblock %}
 	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -15,16 +16,15 @@
 
 	<link rel="shortcut icon" href="../static/img/favicon.ico" type="image/png">
 
-	{% block css %}
-		
-	{% endblock %}
+	<link href="/static/styles/style.css" rel="stylesheet">
+
 
 </head>
 
 <body>
 	<header class = "container">
 		<div class="row">
-			<a href="../"><img src="../static/img/logo.png"></a>
+			<a href="../"><img src="/static/img/logo.png"></a>
 			{% block menu %}
 				{% include 'inc-menu.html' %}
 			{% endblock %}
@@ -59,6 +59,7 @@
   	<script src="https://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
   	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src='../static/js/script.js'></script>
+	{% block js %} {% endblock %}
+    <script src='/static/js/script.js'></script>
 </body>
 </html>

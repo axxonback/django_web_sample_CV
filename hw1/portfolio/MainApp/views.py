@@ -1,7 +1,10 @@
-from django.shortcuts import render
-from django.http import Http404
+from django.shortcuts import render, render_to_response, Http404
+from django.http import Http404, JsonResponse
+from django.template import loader
 from .models import Experience
 from .models import Education
+from .models import Projects
+
 
 
 # Create your views here.
@@ -10,11 +13,12 @@ def home(request):
 
 def port(request):
 	menu = 'disabled'
-	return render(request, 'port1.html', {"menu0": menu})
+	prs = Projects.objects.all()
+	return render(request, 'port1.html', {"prs": prs, "menu0": menu})
 
 def edu(request):
 	menu = 'disabled'
-	edus = Education.objects.all()
+	edus = Education.objects.all().order_by('-start_date')
 	return render(request, 'edu.html', {"edu": edus, "menu1": menu})
 
 def exp(request):
@@ -24,12 +28,26 @@ def exp(request):
 
 def contacts(request):
 	menu = 'disabled'
-	contactss = ["Electra Tower, Tel-Aviv, Israel", "julia.sayapina@icloud.com", "julia.sayapina"]
+	contactss = ["Be'er-Sheva, Israel", "julia.sayapina@icloud.com", "julia.sayapina"]
 	return render(request, 'contacts.html', {"contacts": contactss, "menu3": menu})
 
 def test(request):
 	test1 = [1, 2, 3, 4]
 	return render(request, 'test.html', {'testing': test1})
+
+def latest_first(request):
+	"""Receives ajax-requests and handles them"""
+	if request.is_ajax():
+		slice = request.POST['slice']
+		exp = Experience.objects.all().order_by('-start_date')
+		if slice:
+			exp = exp[: int(slice)]
+		# print(len(jobs))
+		html = loader.render_to_string('inc_jobs.html', {'exp': exp})
+		data = {'html': html}
+		return JsonResponse(data)
+
+	raise Http404
 
 # def not_found(request):
 #     raise Http404

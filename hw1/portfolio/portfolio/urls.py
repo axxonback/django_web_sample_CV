@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^exp/', exp),
     url(r'^contacts/', contacts),
     url(r'^test/', test),
+    url(r'^latest_first/', latest_first)
     # url(r'^.*$', not_found),
 ]
