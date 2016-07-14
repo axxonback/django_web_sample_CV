@@ -23,7 +23,7 @@ def edu(request):
 
 def exp(request):
 	menu = 'disabled'
-	jobs = Experience.objects.all()
+	jobs = Experience.objects.all().order_by('-start_date')
 	return render(request, 'exp.html', {"exp": jobs, "menu2": menu})
 
 def contacts(request):
