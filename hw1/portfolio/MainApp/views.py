@@ -10,7 +10,8 @@ def home(request):
 
 def port(request):
 	menu = 'disabled'
-	return render(request, 'port1.html', {"menu0": menu})
+	prs = Projects.objects.all()
+	return render(request, 'port1.html', {"prs": prs, "menu0": menu})
 
 def edu(request):
 	menu = 'disabled'

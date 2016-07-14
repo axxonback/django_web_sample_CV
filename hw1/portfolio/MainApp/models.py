@@ -28,3 +28,11 @@ class Education(models.Model):
 	desc = models.TextField(verbose_name = "Duties", blank = True)
 	classname = models.CharField(verbose_name = 'Class name', blank=True, max_length = 100)
 
+class Projects(models.Model):
+	name = models.CharField(verbose_name = 'Project name', max_length = 50)
+	date = models.DateField(verbose_name = 'Production date')
+	site = models.URLField(verbose_name = 'Project link')
+	desc = models.TextField(verbose_name = 'Description')
+	img = models.ImageField(verbose_name = 'Image', , null=True, blank=True)
+		
+

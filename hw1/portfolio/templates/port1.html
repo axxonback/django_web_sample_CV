@@ -5,7 +5,7 @@
 	{% endblock %}
 	
 	{% block css %}
-		<link href="../static/styles/main.css" rel="stylesheet">
+		<link href="/static/styles/style.css" rel="stylesheet">
 	{% endblock %}
 
 	{% block caption %}
@@ -15,31 +15,54 @@
 	{% block menu1 %}disabled{% endblock %}
 
 	{% block content %}
-		<section class="container">
-			<div class="row">
-				<div class="col-sm-6">
-					<p>HTML+CSS</p>
-					<img src="../static/img/ph-1.png">
-				</div>
-				<div class="col-sm-6">
-					<p>NFCeramics</p>
-					<img src="../static/img/nfceramics-1.png">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-6">
-					<p>Snake game</p>
-					<img src="../static/img/snake1.png">
-				</div>
-				<div class="col-sm-6">
-					<p>AI research</p>
-					<img src="../static/img/ai.jpg">
-				</div>
-			</div>
-			<div class="row text-center">
-	      		<a class="btn btn-secondary" href="#">View All</a>
-	    	</div>
-		</section>
+<div class="container-fluid contacto">
+	<div id="main">
+		<div class="inner">
+			<section class="tiles">
+				<article class="style1">
+					<span class="image">
+						<img src="/static/img/seleq1.png" alt="slq" />
+					</span>
+					<a href="#">
+						<h2>Seleq</h2>
+						<div class="content">
+							<p>WIX experiment for the Charity organisation סל''ק in Israel</p>
+						</div>
+					</a>
+				</article>
+				<article class="style2">
+					<span class="image">
+						<img src="/static/img/ph1.png" alt="html/css" />
+					</span>
+					<a href="#">
+						<h2>Pure HTML/CSS</h2>
+						<div class="content">
+							<p>A project made within an HTML+CSS course</p>
+						</div>
+					</a>
+				</article>
+				<article class="style4">
+					<span class="image">
+						<img src="/static/img/nfceramics1.png" alt="NFCeramics" />
+					</span>
+					<a href="#">
+						<h2>NFCeramics</h2>
+						<div class="content">
+							<p>A Landing page created for &copy;NFCeramics</p>
+						</div>
+					</a>
+				</article>
+			</section>
+		</div>
+	</div>
+</div>
+
 	{% endblock %}
 
-	
+{% block js%}
+	<script src="/static/assets/js/jquery.min.js"></script>
+	<script src="/static/assets/js/skel.min.js"></script>
+	<script src="/static/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="/static/assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="/static/assets/js/main.js"></script>
+{% endblock %}
