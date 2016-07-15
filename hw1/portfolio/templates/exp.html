@@ -21,7 +21,7 @@
 				<hr>
 				<span>
 					{% csrf_token %}
-					<input type="checkbox" name="latest_first" value="sort" onclick="on_check(this)" /> Latest 3 first
+					<input type="checkbox" name="latest_first" value="sort" onclick="on_check(this)" /> Show last 3
 				</span>
 				<div id="latest_first">
 				{% block jobs %}
