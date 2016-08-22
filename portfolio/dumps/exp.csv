@@ -1,0 +1,19 @@
+id,period,org_id,position,duties,start_date,classname
+2,June’08 – Sept’08,1,Accountant,"Checking balances, invoices, negotiations, conferences",2008-06-01,class1
+3,May’09 – Sept‘10,2,Accountant,"Checking balances, invoices, negotiations, conferences",2009-05-01,class2
+4,Nov’11 — May’12,3,IT department intern,"— Creating and administaring sales DB; 
+— Data analysis using MS Excel и DBForge 2 (SQL);
+— Translation to English;
+— Creating reports and presentations; 
+— Internet shop creating managing;
+— Installing OS and apps.",2011-11-01,class3
+5,Sept’12 — June’14,4,"Postgraduate student, teacher in Information systems department","Postgraduate student of the 2 grade. Making a research for PhD in AI ‘AI methods in the ways spaceweather affects strokes prediction’ using machine learning methods.
+Teachng «Metrology, standardization and sertification».
+Working with documentation of the department.
+Taking part in conferences. Have 9 scientific articles.
+Awarded with the amplified grant",2012-09-01,class4
+6,Dec’13 – Oct’15,5,Analyst,"— Information search and structuring;
+— Analytic work with information;
+terminals and databases; (Bloomberg, Dow Jones Factiva, SPARK, etc.);
+— Short articles, timelines, researches, investigation projects;
+— Searching and preparing data for infographics.",2013-12-02,class5
