@@ -1,6 +1,8 @@
 import os
+import sys
 import dj_database_url
 from django.conf import settings
+from urllib.parse import urlparse, uses_netloc
 
 
 
@@ -37,38 +39,37 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-# import sys
-# from urllib.parse import urlparse, uses_netloc
-
-# # Register database schemes in URLs.
-# uses_netloc.append('mysql')
-
-# try:
-
-#     # Check to make sure DATABASES is set in settings.py file.
-#     # If not default to {}
-
-#     if 'DATABASES' not in locals():
-#         DATABASES = {}
-
-#     if 'DATABASE_URL' in os.environ:
-#         url = urlparse(os.environ['DATABASE_URL'])
-
-#         # Ensure default database exists.
-#         DATABASES['default'] = DATABASES.get('default', {})
-
-#         # Update with environment configuration.
-#         DATABASES['default'].update({
-#             'NAME': url.path[1:],
-#             'USER': url.username,
-#             'PASSWORD': url.password,
-#             'HOST': url.hostname,
-#             'PORT': url.port,
-#         })
+url = mysql://b2b014401df522:ac11f96b@us-cdbr-iron-east-04.cleardb.net/heroku_0ce3f617a023410?reconnect=true
 
 
-#         if url.scheme == 'mysql':
-#             DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
-# except Exception:
-#     print ('Unexpected error:', sys.exc_info())
+# Register database schemes in URLs.
+uses_netloc.append('mysql')
+
+try:
+
+    # Check to make sure DATABASES is set in settings.py file.
+    # If not default to {}
+
+    if 'DATABASES' not in locals():
+        DATABASES = {}
+
+    if 'DATABASE_URL' in os.environ:
+        url = urlparse(os.environ['DATABASE_URL'])
+
+        # Ensure default database exists.
+        DATABASES['default'] = DATABASES.get('default', {})
+
+        # Update with environment configuration.
+        DATABASES['default'].update({
+            'NAME': url.path[1:],
+            'USER': url.username,
+            'PASSWORD': url.password,
+            'HOST': url.hostname,
+            'PORT': url.port,
+        })
+
+
+        if url.scheme == 'mysql':
+            DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+except Exception:
+    print ('Unexpected error:', sys.exc_info())
