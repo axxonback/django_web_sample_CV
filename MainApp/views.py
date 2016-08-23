@@ -49,6 +49,5 @@ def latest_first(request):
 
 	raise Http404
 
-# def not_found(request):
-#     raise Http404
-#     return render(reguest, '404.html')
+# def notfound(request):
+#     return render(request, '500.html')

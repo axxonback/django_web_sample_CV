@@ -5,4 +5,5 @@ django-date-extensions==1.1.0
 gunicorn==19.6.0
 mysqlclient==1.3.7
 whitenoise==3.2.1
+psycopg2==2.5.4
 https://cdn.mysql.com/Downloads/Connector-Python/mysql-connector-python-2.0.4.tar.gz

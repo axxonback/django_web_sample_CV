@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles%}
 
 {% block title %}
 		<title>Contacts</title>
@@ -21,7 +22,7 @@
 					<div class="media">
 						<div class="media-left media-middle">
 						
-						  <img class="media-object contact" src="/static/img/email.png" alt="email">
+						  <img class="media-object contact" src={% static "img/email.png" %} alt="email">
 						
 						</div>
 						<div class="media-body contacttext">
@@ -31,7 +32,7 @@
 					<div class="media">
 						<div class="media-left media-middle">
 						
-						  <img class="media-object contact" src="/static/img/pin.png" alt="map">
+						  <img class="media-object contact" src={% static "img/pin.png" %} alt="map">
 						
 						</div>
 						<div class="media-body contacttext">
@@ -50,12 +51,12 @@
 					</div>
 					<div class="media">
 						<div class="media-left media-middle">
-						<a href=/static/img/CV_Julia_Sayapina.pdf" target="blank">
+						<a href="{% static "img/CV_Julia_Sayapina.pdf" %}" target="blank">
 						  <img class="media-object contact" src="/static/img/pdf.png" alt="pdf">
 						</a>
 						</div>
 						<div class="media-body contacttext">
-						<a href="/static/img/CV_Julia_Sayapina.pdf" target="blank">Download CV as a .pdf</a>
+						<a href="{% static "img/CV_Julia_Sayapina.pdf" %}" target="blank">Download CV as a .pdf</a>
 						</div>
 					</div>
 					

@@ -1,4 +1,4 @@
-
+{% load staticfiles%}
 {% block jobs %}
 {% for e in exp %}
 	<div class="row">
@@ -14,7 +14,7 @@
 				<div class="media">
 				<div class="media-left media-middle">
 				<div class="map">
-					<img class="media-object ref maps {{e.classname}}" src="/static/img/pin.png" alt="map">
+					<img class="media-object ref maps {{e.classname}}" src={% static "img/pin.png" %} alt="map">
 					<span class="{{e.classname}}"><iframe class="dropdown-menu" src="{{e.org.employer_location}}" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></span>
 				</div>
 
@@ -31,7 +31,7 @@
 					<div class="media">
 					<div class="media-left media-middle">
 					<a href="{{e.org.employer_site}}">
-					  <img class="media-object ref" src="/static/img/link.png" alt="link">
+					  <img class="media-object ref" src={% static "img/link.png" %} alt="link">
 					</a>
 					</div>
 					<div class="media-body reftext">
