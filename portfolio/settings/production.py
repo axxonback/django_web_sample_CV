@@ -39,8 +39,6 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-url = mysql://b2b014401df522:ac11f96b@us-cdbr-iron-east-04.cleardb.net/heroku_0ce3f617a023410?reconnect=true
-
 
 # Register database schemes in URLs.
 uses_netloc.append('mysql')
