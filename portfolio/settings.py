@@ -139,7 +139,6 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static",)
-print ("static dir path", STATIC_ROOT)
 
 # MEDIA_URL = '/media/'
 
@@ -162,7 +161,6 @@ ALLOWED_HOSTS = ['*']
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print ("project dir path", PROJECT_ROOT)
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
@@ -177,37 +175,37 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-# import sys
-# from urllib.parse import urlparse, uses_netloc
+import sys
+from urllib.parse import urlparse, uses_netloc
 
-# # Register database schemes in URLs.
-# uses_netloc.append('mysql')
+# Register database schemes in URLs.
+uses_netloc.append('mysql')
 
-# try:
+try:
 
-#     # Check to make sure DATABASES is set in settings.py file.
-#     # If not default to {}
+    # Check to make sure DATABASES is set in settings.py file.
+    # If not default to {}
 
-#     if 'DATABASES' not in locals():
-#         DATABASES = {}
+    if 'DATABASES' not in locals():
+        DATABASES = {}
 
-#     if 'DATABASE_URL' in os.environ:
-#         url = urlparse(os.environ['DATABASE_URL'])
+    if 'DATABASE_URL' in os.environ:
+        url = urlparse(os.environ['DATABASE_URL'])
 
-#         # Ensure default database exists.
-#         DATABASES['default'] = DATABASES.get('default', {})
+        # Ensure default database exists.
+        DATABASES['default'] = DATABASES.get('default', {})
 
-#         # Update with environment configuration.
-#         DATABASES['default'].update({
-#             'NAME': url.path[1:],
-#             'USER': url.username,
-#             'PASSWORD': url.password,
-#             'HOST': url.hostname,
-#             'PORT': url.port,
-#         })
+        # Update with environment configuration.
+        DATABASES['default'].update({
+            'NAME': url.path[1:],
+            'USER': url.username,
+            'PASSWORD': url.password,
+            'HOST': url.hostname,
+            'PORT': url.port,
+        })
 
 
-#         if url.scheme == 'mysql':
-#             DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
-# except Exception:
-#     print ('Unexpected error:', sys.exc_info())
+        if url.scheme == 'mysql':
+            DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+except Exception:
+    print ('Unexpected error:', sys.exc_info())
