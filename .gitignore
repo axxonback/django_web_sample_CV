@@ -49,4 +49,5 @@ coverage.xml
 target/
 
 #Static
-staticfiles
+staticfiles/
+staticassets/
