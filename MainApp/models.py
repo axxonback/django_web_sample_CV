@@ -3,12 +3,12 @@ from django.db import models
 class Employer(models.Model):
 	employer_name = models.CharField(verbose_name = "Name", max_length = 50)
 	employer_site = models.URLField(verbose_name = "Site", max_length = 64, blank = True)
-	employer_location = models.URLField(verbose_name = "Location", max_length = 300)
+	employer_location = models.URLField(verbose_name = "Location", max_length = 500)
 
 class StudyPlace(models.Model):
 	stp_name = models.CharField(verbose_name = "Place of study", max_length = 80)
 	stp_site = models.URLField(verbose_name = "Site", max_length = 64, blank = True)
-	stp_location = models.URLField(verbose_name = "Location", max_length = 300)
+	stp_location = models.URLField(verbose_name = "Location", max_length = 500)
 		
 
 class Experience(models.Model):
