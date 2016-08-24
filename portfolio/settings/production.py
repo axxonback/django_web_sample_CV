@@ -7,7 +7,7 @@ from urllib.parse import urlparse, uses_netloc
 
 
 DEBUG = False
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 DATABASES = settings.DATABASES
 
