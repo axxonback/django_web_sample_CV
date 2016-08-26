@@ -17,7 +17,7 @@ def port(request):
 		menu = 'disabled'
 		prs = Projects.objects.all()
 	except:
-		print (str(sys.exc_info()))
+		print(str(sys.exc_info()))
 	return render(request, 'port1.html', {"prs": prs, "menu0": menu})
 
 def edu(request):
